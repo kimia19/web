@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"onclick="jump()">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <p>click to jump....Reload this page when you lose</p>
+    <div id="game">
+        <div id="character"></div>
+        <div id="block"></div>
+    </div>
+</body>
+<script>
+    var character=document.getElementById("character");
+    var block=document.getElementById("block");
+    function jump(){
+        if(character.classlist!="animate"){
+            character.classList.add("animate");
+        }
+        
+        setTimeout(function(){
+            character.classList.remove("animate");
+        },500);
+
+    }
+    var checkerDead=setInterval(function(){
+        var charactertop=
+        parseInt(window.getComputedStyle(character)
+        .getPropertyValue("top"));
+        var blockleft=
+        parseInt(window.getComputedStyle(block)
+        .getPropertyValue("left"));
+        if(blockleft<20&&blockleft>0 &&
+        charactertop>=130){
+            block.style.animate="none";
+            block.style.display="none";
+            alert("you lose");
+        }
+    },10);
+</script>
+</html>

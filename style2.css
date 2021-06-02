@@ -1,0 +1,16 @@
+body button{
+    font-family: Georgia, serif;
+}
+.message{
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    top:50px;
+}
+.btn1,.btn2{
+    position: relative;
+    top:100px;
+    margin-left: 40px;
+    padding: 10px 20px;
+    background-color: aliceblue;
+}

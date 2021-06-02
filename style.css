@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+
+}
+body{
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+section{
+  padding: 100px 0;
+}
+.about,.skills,.contact,footer{
+  font-family: "poppins",sans-serif;
+}
+.max-width{
+  max-width: 1300px;
+  padding: 0 85px;
+  margin: auto;
+}
+/*navbar*/
+.navbar{
+  position: fixed;
+  width: 100%;
+  padding: 30px 0;
+  z-index: 999;
+  font-family: "ubuntu",sans-serif;
+  background-color: #9c55c2;
+}
+.navbar .max-width{
+  display: flex;
+  align-items: center;
+  background: #9c55c2;
+  font-family: "ubuntu",sans-serif ;
+}
+.navbar .logo a{
+  color:white;
+  font-size: 35px;
+  font-weight: 600;
+}
+.navbar .menu li{
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
+  position: relative;
+  left: 500px;
+}
+.navbar .logo a span{
+  color:#ED7F1F;
+}
+
+.navbar .menu li a{
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+  color:#ED7F1F;
+}
+.menu-btn{
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+.home{
+  display: flex;
+  background: url("1\ \(2\).jpg")no-repeat center;
+  height: 100vh;
+  color:#9c55c2;
+  min-height: 500px;
+  font-family: "ubuntu",sans-serif ;
+  
+}
+.home .max-width{
+  margin:auto 0 auto 40px;
+}
+.home .home-content .text1{
+  font-size: 27px;
+  animation: mymove 3s 1;
+}
+.home .home-content .text2{
+  font-size: 75px;
+  animation: mymove 3s 1;
+  font-weight: 600;
+  margin-left: -3px;
+  background: #9C55C2;
+background: -webkit-radial-gradient(ellipse farthest-corner at center center, #9C55C2 33%, #ED7F1F 55%, #911A91 40%);
+background: -moz-radial-gradient(ellipse farthest-corner at center center, #9C55C2 33%, #ED7F1F 55%, #911A91 40%);
+background: radial-gradient(ellipse farthest-corner at center center, #9C55C2 33%, #ED7F1F 55%, #911A91 40%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+ .home .home-content .text3{
+  animation: mymove 3s 1;
+  font-size: 40px;
+  margin: 5px 0;
+}
+/*animate home*/
+@keyframes mymove{
+  0%{
+    display: none;
+  }
+    40%{
+      margin-left: 100px;
+    }
+}
+/*responsive*/ 
+
+/*about*/
+.about .title{
+  position: relative;
+  font-family: "ubuntu",sans-serif;
+  text-align: center;
+  font-size: 40px;
+  top:100px;
+  color: #ED7F1F;
+  padding-bottom: 60px;
+  font-weight: 500;
+}
+.about .title::before{
+  content: "";
+  position: absolute;
+  width: 180px;
+  bottom: 0px;
+  left: 50%;
+  height: 3px;
+  background-color: #ED7F1F;
+  transform: translateX(-50%);
+}
+.about .title::after{
+  content: "Who I am";
+  position: absolute;
+  font-size: 20px;
+  color: black;
+  padding:5px;
+  bottom: -7px;
+  left: 50%;
+  background: white;
+  transform: translateX(-50%);
+}
+.about .about-content{
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.about .about-content p{
+  margin: 10px -100px;
+  border: 5px solid #ED7F1F;
+  padding: 25px;
+  text-indent: 13px;
+  text-align: justify;
+  position: relative;
+  right:-380px;
+
+}
+.skills p{
+  text-indent: 13px;
+  text-align: justify;
+}
+section .title::before{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 400px;
+  height: 3px;
+  background: black;
+  transform: translateX(-50%);
+}
+section .title{
+  position: relative;
+  bottom: 100px;
+}
+section .title::after{
+  position: absolute;
+  content: "What I know";
+  bottom: -12px;
+  left: 50%;
+  font-size: 40px;
+  color: #ED7F1F;
+  padding: 5px;
+  background: white;
+  transform: translateX(-50%);
+}
+.skills,.skills-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skills .skills-content .column{
+  width: calc(50%-30px);
+}
+.skills .skills-content .left .text{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 30px;
+
+}
+.skills .skills-content .right .bars{
+  margin-bottom: 30px;
+}
+.skills .skills-content .right .info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skills .skills-content .right span{
+  font-weight: 500;
+  font-size: 18px;
+}
+.skills .skills-content .right .line{
+  height: 6px;
+  width: 700px;
+  background-color: lightgray;
+  position: relative;
+}
+.skills .skills-content .right .line::before{
+  content: "";
+  position: absolute;
+  height: 100%;
+  background-color: #9c55c2;
+}
+.skills .skills-content .right .html::before{
+  width: 90%;
+}
+.skills .skills-content .right .css::before{
+  width: 70%;
+}
+.skills .skills-content .right .js::before{
+  width: 50%;
+}
+.games{
+  position: absolute;
+  width: 100%;
+  height:150px;
+  font-size: 20px;
+  color: #9c55c2;
+  font-weight: 700;
+  left:200px;
+  font-family: "poppins",sans-serif;
+}
+.games a{
+  color: black;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px black, 0 0 1em #911A91, 0 0 0.2em #9c55c2;
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  left:270px;
+  font-family: "poppins",sans-serif;
+}
+.games a:hover{
+  color:#ED7F1F;
+  text-decoration: none;
+}
+.games ul{
+  list-style-type: none;
+}
+.contact .title2{
+  position: relative;
+  font-family: "ubuntu",sans-serif;
+  text-align: center;
+  font-size: 40px;
+  top:100px;
+  color: #ED7F1F;
+  padding-bottom: 60px;
+  font-weight: 500;
+}
+.contact .title2::before{
+  content: "";
+  position: absolute;
+  width: 180px;
+  bottom: 0px;
+  left: 50%;
+  height: 3px;
+  background-color: #ED7F1F;
+  transform: translateX(-50%);
+}
+.contact .title2::after{
+  content: "get in touch";
+  position: absolute;
+  font-size: 20px;
+  color: black;
+  padding:5px;
+  bottom: -7px;
+  left: 50%;
+  background: white;
+  transform: translateX(-50%);
+}
+.contact .name-info,.email-info,.add-info{
+  position: absolute;
+  left:300px;
+}
+.contact .name{
+  position: relative;
+  bottom:5px;
+}
+.column .email{
+  position: relative;
+  bottom: 3px;
+}
+.contact .add{
+  position: relative;
+  bottom: 5px;
+}
+.contact .right form .fields{
+  display: flex;
+}
+.contact .right form .field{
+  width: 62%;
+  height:45px;
+}
+.contact .right form .fields .field{
+  height: 45px;
+  width: 30%;
+  margin-bottom: 16px;
+}
+.contact .right form .textarea{
+  height: 80px;
+  margin-top: 15px;
+
+}
+.contact .right form .name{
+  margin-right: 10px;
+}
+.contact .right form .email{
+  margin-left: 10px;
+}
+.contact .right form .field input,.contact .right form .textarea textarea{
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 16px;
+  font-size: 17px;
+  font-family: "poppins",sans-serif;
+}
+.contact .right form .textarea textarea{
+  padding-top: 10px;
+  resize: none;
+}
+.contact .right form .button{
+  margin-top: 10px;
+  width: 170px;
+  height:47px;
+
+}
+.contact .right form .button button{
+  width: 170px;
+  height: 100%;
+  border:1px solid #9c55c2;
+  background: #9c55c2;
+  color: black;
+  font-size: 20px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition:all 0.3s ease ;
+}
+.contact .right form .button button:hover{
+  color: black;
+  background: none;
+}
+footer{
+  background-color: #9c55c2;
+  padding:20px 25px;
+}
+footer span a{
+  color: white;
+  text-decoration: none;
+}
+
+
+
